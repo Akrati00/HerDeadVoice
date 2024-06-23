@@ -97,13 +97,13 @@
   left: 222px;
   transform: translateY(-15px) translateX(0px) translateZ(15px) rotateX(104deg);
 }
-.mobile-layout .book-cover:hover {
+.mobile-layout .book-cover-clicked {
   transform: rotateX(75deg) translateZ(3px) scale(0.75);
 }
-.mobile-layout .book-cover:hover + .preface {
+.mobile-layout .book-cover-clicked + .preface {
   transform: translateY(-302px);
 }
-.mobile-layout .book-cover:hover + .preface .icon {
+.mobile-layout .book-cover-clicked + .preface .icon {
   transform: rotateX(180deg);
 }
 .mobile-layout .preface {
@@ -215,6 +215,14 @@
             </div>
         </div>
     </div>
-    
+     <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const bookCover = document.querySelector('.mobile-layout .book-cover');
+
+            bookCover.addEventListener('click', () => {
+                bookCover.classList.toggle('book-cover-clicked');
+            });
+        });
+    </script>
 </body>
 </html>
