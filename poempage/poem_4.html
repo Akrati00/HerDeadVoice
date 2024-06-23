@@ -1,49 +1,229 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem</title>
-    <link rel="stylesheet" href="./page.css">
-    <link rel="stylesheet" href="../assets/css/style2.css">
+    <title>Shattered Yet Unbroken</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(135deg, Tomato  0%, DarkMagenta  100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.container {
+    width: 70%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.poem {
+    position: relative;
+}
+
+.title {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: gray  ;
+  position: relative;
+    transition: color 0.3s, transform 0.3s;
+  z-index:30;
+}
+.title:hover{
+  color:DarkMagenta;
+}
+t{
+  z-index:0;
+}
+.t:before{
+  content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 90px;
+    transition: width 0.3s;
+  opacity :0.4;
+}
+
+.t:hover {
+    transform: translateX(10px);
+}
+
+.t:hover::before {
+    width: 100%;
+}
+
+.t:hover::after {
+    opacity: 0.5;
+  
+}
+
+.author {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: Purple ;
+    font-style: italic;
+}
+
+.content {
+    text-align: left;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.line {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #ab47bc;
+    transition: width 0.3s;
+}
+
+.line:hover {
+    color: #6a1b9a;
+    transform: translateX(10px);
+}
+
+.line:hover::before {
+    width: 100%;
+}
+
+.line:hover::after {
+    opacity: 1;
+}
+.t:before{
+   background-color: Tomato   
+;
+}
+.t:hover{
+  color:Tomato  ;
+}
+.o:before{
+   background-color: orange
+;
+}
+.o:hover{
+  color:orange;
+}
+.g:before{
+   background-color: green
+;
+}
+.g:hover{
+  color:green;
+}
+.r:before{
+   background-color: red
+;
+}
+.r:hover{
+  color:red;
+}
+.b:before{
+   background-color: blue
+;
+}
+.b:hover{
+  color:blue;
+}
+.p:before{
+   background-color: lightPink
+;
+}
+.p:hover{
+  color:lightPink;
+}
+
+    </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="woolf"></div>
-    <div class="content-container">
-        <div class="content">
-            <h1>Shattered Yet Unbroken</h1>
-<h2>Abhinav Patel</h2>
-<p>The sorrow that doth plague her soul<br />
-A pain that none but she doth know<br />
-Her tears fall like summer rain<br />
-A silent plea for love in vain</p>
-<p>What horrors must making everything endure<br />
-That she doth cry and wail so pure<br />
-A heart so burdened with such strife<br />
-That every night she takes her life</p>
-<p>Her spirit was crushed, her body weak<br />
-No refuge left for her to seek<br />
-A victim of a cruel design<br />
-A prisoner of a world unkind</p>
-<p>How the world hath failed this fair<br />
-Injustice doth her life ensnare<br />
-But yet she doth not yield to fate<br />
-For hope still lingers, though it's late</p>
-<p>With every tear, she finds the strength<br />
-To carry on, despite the length<br />
-Of the path, she must tread alone<br />
-Her courage is like a diamond stone</p>
-<p>And so she cries, with a heart so bold<br />
-For all the tales that go untold<br />
-For every soul that suffers so<br />
-For every heart that longs to know</p>
-<p>May heaven's light guide her way<br />
-And bring her solace every day<br />
-For in her tears doth lie the power<br />
-To conquer all, in life's darkest hour</p>
+    <div class="container">
+        <div class="poem">
+          <div class=" t"><h1 class="title">Shattered Yet Unbroken</h1></div>
+            <p class="author">by Abhinav Patel</p>
+            <div class="content">
+                <p class="line">The sorrow that doth plague her soul,</p>
+                <p class="line">A pain that none but she doth know,</p>
+                <p class="line">Her tears fall like summer rain,</p>
+                <p class="line">A silent plea for love in vain.</p>
+              <br/>
+              <br/>
+                </div>
+          <div class="content">
+                <p class="line t">What horrors must making everything endure,</p>
+                <p class="line t">That she doth cry and wail so pure,</p>
+                <p class="line t">A heart so burdened with such strife,</p>
+                <p class="line t">That every night she takes her life.</p>
+            </div>
+          
+              <br/>
+              <br/>
+                    <div class="content">
+                <p class="line o">Her spirit was crushed, her body weak,</p>
+                <p class="line o">No refuge left for her to seek,</p>
+                <p class="line o">A victim of a cruel design,</p>
+                <p class="line o">A prisoner of a world unkind
+.</p>
+            </div>
+          
+              <br/>
+              <br/>
+          <div class="content">
+                <p class="line g">How the world hath failed this fair,</p>
+                <p class="line g">Injustice doth her life ensnare,</p>
+                <p class="line g">But yet she doth not yield to fate,</p>
+                <p class="line g">For hope still lingers, though it's late.</p>
+            </div>
+                <br/>
+              <br/>
+          <div class="content">
+                <p class="line r">With every tear, she finds the strength,</p>
+                <p class="line r">To carry on, despite the length,</p>
+                <p class="line r">Of the path, she must tread alone,</p>
+                <p class="line r">Her courage is like a diamond stone.</p>
+            </div>
+               <br/>
+              <br/>
+          <div class="content">
+                <p class="line b">And so she cries, with a heart so bold,</p>
+                <p class="line b">For all the tales that go untold,</p>
+                <p class="line b">For every soul that suffers so,</p>
+                <p class="line b">For every heart that longs to know.</p>
+            </div>     <br/>
+              <br/>
+          <div class="content">
+                <p class="line p">May heaven's light guide her way,</p>
+                <p class="line p">And bring her solace every day,</p>
+                <p class="line p">For in her tears doth lie the power,</p>
+                <p class="line p">To conquer all, in life's darkest hour.</p>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
