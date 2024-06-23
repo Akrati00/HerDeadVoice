@@ -1,29 +1,207 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem</title>
-    <link rel="stylesheet" href="./page.css">
-    <link rel="stylesheet" href="../assets/css/style2.css">
-</head>
-<body>
-    <div class="background"></div>
-    <div class="woolf"></div>
-    <div class="content-container">
-        <div class="content">
-            <h1>Her Trapped Soul</h1>
-<h2>Aditi Jogdand</h2>
-<p>She is frightened deep inside<br />
-Sorrow and hopelessness beside<br />
-Surrounded by unseen, threatening presence of them<br />
-Which brutally grabs her soul in insecurity and blame  </p>
-<p>Her smile faded away with her hopes, dreams for the future<br />
-Now just depression, anxiety that's what she nurtures<br />
-The curiosity she had as a child<br />
-Is bothering massive cyclones which aren't mild  </p>
-        </div>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Her Trapped Soul | Aditi Jogdand</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: linear-gradient(
+          to right,
+          rgba(36, 31, 31, 1) 0%,
+          rgba(36, 31, 31, 1) 32%,
+          rgba(74, 71, 70, 1) 100%
+        );
+      }
+      .line {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        opacity: 0.1;
+        background-color: #000;
+      }
+      .main-content {
+        /* overflow:hidden; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+
+        height: 100%;
+
+        background: linear-gradient(
+          to right,
+          rgba(36, 31, 31, 1) 0%,
+          rgba(36, 31, 31, 1) 32%,
+          rgba(74, 71, 70, 1) 100%
+        );
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+      }
+
+      .vignette {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0px 0px 150px 20px black;
+        mix-blend-mode: multiply;
+        -webkit-animation: vignette-anim 3s infinite; /* Safari 4+ */
+        -moz-animation: vignette-anim 3s infinite; /* Fx 5+ */
+        -o-animation: vignette-anim 3s infinite; /* Opera 12+ */
+        animation: vignette-anim 3s infinite; /* IE 10+, Fx 29+ */
+      }
+
+      .noise {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        pointer-events: none;
+        opacity: 0.15;
+      }
+
+      .line {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        opacity: 0.1;
+        background-color: #000;
+      }
+
+      .titleCont {
+        position: relative;
+        margin-top: -70px;
+      }
+
+      .main-title {
+        padding: 0.3em 1em 0.25em;
+        font-weight: 400;
+        font-size: 40px;
+        color: white;
+        font-family: "Bellefair", serif;
+        position: relative;
+        line-height: 1.3;
+      }
+      .main-header {
+        padding: 0.3em 1em 0.25em;
+        font-weight: 900;
+        font-size: 80px;
+        color: white;
+        font-family: "Bellefair", serif;
+        position: relative;
+
+        /* width: 100%; */
+        height: 3.2%;
+      }
+
+      header {
+        padding: 40px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .author {
+        font-family: "Bellefair", serif;
+        position: relative;
+        padding-left: 40vw;
+        text-decoration: underline;
+        margin-top: 30px;
+      }
+      .overTitle {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .dot {
+        width: 3px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        opacity: 0.3;
+      }
+
+      @-webkit-keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      @-moz-keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      @-o-keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      @keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main" class="main-content" id="main-content">
+      <header>
+        <h1 class="main-header">Her Trapped Soul</h1>
+        <em class="author">Aditi Jogdand</em>
+      </header>
+      <div class="titleCont">
+        <h1 class="main-title" id="main-title">
+          "She is frightened deep inside<br /><span style="padding-left: 100px"
+            >Sorrow and hopelessness beside</span
+          ><br /><span style="padding-right: 110px"
+            >Surrounded by unseen, threatening presence of them</span
+          ><br /><span style="padding-left: -20px"
+            >Which brutally grabs her soul in insecurity and blame"</span
+          >
+        </h1>
+        <h1 class="main-title" id="main-title">
+          "Her smile faded away with her hopes, dreams for the future<br /><span
+            style="padding-left: 100px"
+            >Now just depression, anxiety that's what she nurtures</span
+          ><br /><span style="padding-right: 110px"
+            >The curiosity she had as a child</span
+          ><br /><span style="padding-left: -20px"
+            >Is bothering massive cyclones which aren't mild"</span
+          >
+        </h1>
+      </div>
+
+      <canvas id="noise" class="noise"></canvas>
+      <div class="vignette"></div>
+    </main>
+
+    <script src="./line.js"></script>
+    <script src="./noise.js"></script>
+  </body>
 </html>
