@@ -1,39 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem</title>
-    <link rel="stylesheet" href="./page.css">
-    <link rel="stylesheet" href="../assets/css/style2.css">
-</head>
-<body>
-    <div class="background"></div>
-    <div class="woolf"></div>
-    <div class="content-container">
-        <div class="content">
-            <h1>Darkest Sunset</h1>
-<h2>Abhinav Patel</h2>
-<p>To whom have we blamed till long ?<br />
-But the real monster continued to kill innocent souls along,<br />
-Who is to blame in this darkening time,<br />
-When so many have been subjected to crime?<br />
-For whom are we turning a searching eye,<br />
-As innocent girls must suffer and cry?</p>
-<p>Soft innocence used as a weapon of fate,<br />
-The faces of sweet lasses filled with hate.<br />
-What fearful power doth hold up their hand,<br />
-Deeming that these young victims must endure such pain?</p>
-<p>The blackest hearts can weaponize fear;<br />
-Young girl's lives thrown in disarray and queer.<br />
-Our world's foundations swept out from beneath;<br />
-Young girls stand broken in stagnant tears beneath.</p>
-<p>So now we must take up justice's call;<br />
-Our souls must show that villains won't win at all!<br />
-Know this the fight for justice shall never wholly end,<br />
-Nowhere else but here good must rise upon evil bent!</p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darkest Sunset | Abhinav Patel</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        overflow:hidden;
+      }
+
+      .content {
+        width: fit-content;
+        margin: auto;
+        border-radius: 15px;
+        border: 4px solid #12b5c0;
+        background: #000;
+        box-shadow: 0px 4px 13.6px 0px rgba(122, 223, 255, 0.99);
+        color: white;
+        height: 72vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 30px;
+        padding-right:20px;
+        font-family:'Happy monkey';
+        position:relative;
+      }
+
+
+
+.image{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:30px;
+    position:relative;
+    top:40px;
+    z-index:10;
+}
+
+span{
+    color:#F075AA;
+}
+     
+
+      .scrollable-div{
+        scrollbar-width: thin;
+  scrollbar-color: rgb(34, 255, 181) rgba(103, 226, 239, 0.5);
+      }
+
+
+      .title{
+        width:300px;
+      }
+
+      @media  screen and (max-width:320px) {
+        .title{
+            width:212px;
+        }
+        p{
+            font-size:0.8rem;
+        }
+        .content{
+            padding:20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="image">
+        <img class="title" src="/herdeadvoice/assets/images/Group 1 (2).png" alt="title">
     </div>
-</body>
+    <div class="content scrollable-div">
+        
+      
+      <p>To whom have we <span>blamed</span> till long ?<br />
+        But the real monster continued to kill <span>innocent</span> souls along,<br />
+        Who is to <span>blame</span> in this darkening time,<br />
+        When so many have been subjected to <span>crime</span>?<br />
+        For whom are we turning a searching eye,<br />
+        As innocent girls must <span>suffer</span> and cry?</p><br>
+        <p>Soft innocence used as a weapon of fate,<br />
+        The faces of sweet lasses filled with <span>hate</span>.<br />
+        What fearful power doth hold up their hand,<br />
+        Deeming that these young victims must endure such pain?</p><br>
+        <p>The <span>blackest</span> hearts can weaponize fear;<br />
+        Young girl's lives thrown in disarray and queer.<br />
+        Our world's foundations swept out from beneath;<br />
+        Young girls stand broken in stagnant tears beneath.</p><br>
+        <p>So now we must take up justice's call;<br />
+        Our souls must show that <span>villains</span> won't win at all!<br />
+        Know this the fight for <span>justice</span> shall never wholly end,<br />
+        Nowhere else but here good must <span>rise</span> upon evil bent!</p>
+        
+    </div>
+    <figure style="z-index:10;display:flex;align-items:center;justify-content:center;position:relative;bottom:40px;">
+        <img src="/herdeadvoice/assets/images/authname.png" alt="abhinav patel" width="200px" >
+    </figure>
+</div>
+  </body>
 </html>
