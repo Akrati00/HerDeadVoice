@@ -1,37 +1,220 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem</title>
-    <link rel="stylesheet" href="./page.css">
-    <link rel="stylesheet" href="../assets/css/style2.css">
+    <title>Her Smothered Breaths | Abhinav Patel</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:wght@300;400;700&display=swap");
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --mobile-width: 325px;
+  --mobile-height: 670px;
+  --mobile-radius: 25px;
+  --separator-height: 500px;
+  --bg: #fdf3f2;
+  --mobile-bg: #fdeae6;
+  --intro-bg: #eed7d1;
+  --font-color: #807b7b;
+  --transition: transform 0.7s ease-in-out;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+}
+
+
+
+.mobile-layout {
+  width: var(--mobile-width);
+  height: var(--mobile-height);
+  margin: 30px 0;
+  border-radius: var(--mobile-radius);
+  perspective: 500px;
+  overflow: hidden;
+  color: var(--font-color);
+  background-color: var(--mobile-bg);
+  box-shadow: 36px 36px 50px 15px rgba(238, 215, 209, 0.8196078431);
+}
+.mobile-layout .notification-header {
+  position: fixed;
+  top: 5px;
+  width: 100%;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: "great vibes","Open Sans", sans-serif;
+  font-weight: bold;
+  z-index: 6;
+}
+.mobile-layout .actions {
+  position: fixed;
+  top: 37px;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  z-index: 6;
+}
+.mobile-layout .book-cover {
+  position: relative;
+  height: var(--separator-height);
+  width: calc(var(--mobile-width) * 2);
+  left: -52.5%;
+  border-top-left-radius: var(--mobile-radius);
+  border-top-right-radius: var(--mobile-radius);
+  background-color: var(--intro-bg);
+  transform-style: preserve-3d;
+  transform-origin: 50% 40%;
+  transition: var(--transition);
+  z-index: 4;
+}
+.mobile-layout .book-top {
+  width: 170px;
+  position: absolute;
+  top: 180px;
+  left: 250px;
+  z-index: 5;
+  transform: translateZ(28.5px);
+}
+.mobile-layout .book-side {
+  position: absolute;
+  top: 386px;
+  left: 222px;
+  transform: translateY(-15px) translateX(0px) translateZ(15px) rotateX(104deg);
+}
+.mobile-layout .book-cover:hover {
+  transform: rotateX(75deg) translateZ(3px) scale(0.75);
+}
+.mobile-layout .book-cover:hover + .preface {
+  transform: translateY(-302px);
+}
+.mobile-layout .book-cover:hover + .preface .icon {
+  transform: rotateX(180deg);
+}
+.mobile-layout .preface {
+  height: var(--separator-height);
+  padding: 50px;
+  transition: var(--transition);
+  background: white;
+}
+.mobile-layout .preface .header {
+  display: flex;
+  align-items: center;
+}
+.mobile-layout .preface .title {
+  font-family:"great vibes", "Quicksand", sans-serif;
+  font-size: 30px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  color:black;
+  margin-bottom: 10px;
+}
+.mobile-layout .preface .author {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.mobile-layout .preface .icon {
+  transform-origin: top;
+  transition: var(--transition);
+}
+.mobile-layout .preface .body {
+  font-family: "Quicksand", sans-serif;
+}
+.mobile-layout .preface .body p:first-child {
+  margin-bottom: 15px;
+}
+
+.content{
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+.body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(109, 106, 106);
+  font-size:0.8rem;
+}
+.content {
+ 
+  padding: 15px;
+  max-height: 400px; 
+  overflow-y: auto; 
+  width:fit-content;
+}
+
+.scrollable-div{
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) rgba(148, 148, 148, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+    </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="woolf"></div>
-    <div class="content-container">
-        <div class="content">
-            <h1>Her Smothered Breaths</h1>
-<h2>Abhinav Patel</h2>
-<p>When she wants to speak up for her rights<br />
-She is told to silence, put out of sight<br />
-For looking outwards, fighting in vain<br />
-They're seen as monsters and scorned again.</p>
-<p>A lifetime of violence year after year<br />
-All the while almost no one hears<br />
-The cries and voices that plead for justice<br />
-It's silenced instead with centuries of dust.</p>
-<p>It's sad when victim is seen with shame,<br />
-As if the guilt lies in her name.</p>
-<p>To be devastated and violated this way,<br />
-So much to bear no words can say.</p>
-<p>So, many of us must rise to defend her right<br />
-To join forces as a mass uprising with might.<br />
-We have a moral obligation to stand strong,<br />
-And protect the victims of this horrible wrong.</p>
+    <div class="container">
+        <div class="container">
+            <div class="mobile-layout">
+                <div class="book-cover">
+                    <img class="book-top" src="https://i.postimg.cc/13sbhQV3/cover3.png" alt="book-top" />
+                    <img class="book-side" src="https://raw.githubusercontent.com/atomic-variable/images-repo/e37f432405904a280858e5437ce1960753bc78a3/book-side.svg" alt="book-side" />
+                </div>
+                <div class="preface">
+                    <div class="content scrollable-div">
+                        <div class="header">
+                            <div class="title"><h3>Her Smothered Breaths</h3></div>
+                            <div class="icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="author">by Abhinav Patel</div>
+                        <div class="body">
+                            <p>When she wants to speak up for her rights<br />
+                                She is told to silence, put out of sight<br />
+                                For looking outwards, fighting in vain<br />
+                                They're seen as monsters and scorned again.</p><br>
+                                <p>A lifetime of violence year after year<br />
+                                All the while almost no one hears<br />
+                                The cries and voices that plead for justice<br />
+                                It's silenced instead with centuries of dust.</p><br>
+                                <p>It's sad when victim is seen with shame,<br />
+                                As if the guilt lies in her name.</p><br>
+                                <p>To be devastated and violated this way,<br />
+                                So much to bear no words can say.</p> <br>
+                                <p>So, many of us must rise to defend her right<br />
+                                To join forces as a mass uprising with might.<br />
+                                We have a moral obligation to stand strong,<br />
+                                And protect the victims of this horrible wrong.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
 </body>
 </html>
